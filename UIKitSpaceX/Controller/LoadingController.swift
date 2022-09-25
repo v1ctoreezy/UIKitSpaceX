@@ -8,6 +8,7 @@
 import UIKit
 
 class LoadingController: UIViewController {
+    private let noticName = "loaded"
     var rockets = [Rocket]()
     var launches = [Launch]()
     
@@ -19,21 +20,14 @@ class LoadingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let notific = NotificationCenter.default
+        notific.addObserver(self, selector: #selector(loaded), name: Notification.Name(noticName), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configView()
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         getData()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func configView() {
@@ -54,5 +48,16 @@ class LoadingController: UIViewController {
             self.launches = launches
         }
         while rockets.isEmpty || launches.isEmpty { } // Костыль
+        
+        NotificationCenter.default.post(name: Notification.Name(noticName), object: nil)
+    }
+    
+    func showPageController() {
+        let page = PageController(rockets: rockets, launches: launches)
+        navigationController?.pushViewController(page, animated: true)
+    }
+    
+    @objc func loaded() {
+        showPageController()
     }
 }

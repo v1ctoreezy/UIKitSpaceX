@@ -9,18 +9,19 @@ import UIKit
 
 class LoadingView: UIView {
     let activity: UIActivityIndicatorView = {
-        let actv = UIActivityIndicatorView(style: .medium)
+        let actv = UIActivityIndicatorView(style: .large)
         actv.translatesAutoresizingMaskIntoConstraints = false
-        actv.backgroundColor = .white
+        actv.color = .white
+        actv.startAnimating()
         return actv
     }()
     
-//    let label: UILabel = {
-//       let label = UILabel()
-//        label.text = "dsa"
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        return label
-//    }()
+    let label: UILabel = {
+       let label = UILabel()
+        label.text = "dsa"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,14 +34,11 @@ class LoadingView: UIView {
     }
     
     func configActivity() {
-        
         addSubview(activity)
-        //addSubview(label)
+
         NSLayoutConstraint.activate([
             activity.centerXAnchor.constraint(equalTo: centerXAnchor),
-            activity.centerYAnchor.constraint(equalTo: centerYAnchor),
-//            label.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            label.centerYAnchor.constraint(equalTo: centerYAnchor)
+            activity.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }

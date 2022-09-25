@@ -1,11 +1,15 @@
 //
-//  SettingsStack.swift
-//  SpaceXRockets
+//  SwitcherDirsrpView.swift
+//  UIKitSpaceX
 //
-//  Created by Andrei Panasenko on 10.04.2022.
+//  Created by Виктор Черкасов on 16.08.2022.
 //
 
 import UIKit
+
+class CustomSegment: UISegmentedControl {
+
+}
 
 class SwitcherDirsrpView: UIView {
     
@@ -25,7 +29,7 @@ class SwitcherDirsrpView: UIView {
     lazy var measureSwitcher: UISegmentedControl = {
         let items = [measure1, measure2]
         let switcher = UISegmentedControl(items: items)
-        switcher.backgroundColor = .white
+        switcher.backgroundColor = .black
         switcher.translatesAutoresizingMaskIntoConstraints = false
         switcher.selectedSegmentIndex = 0
         switcher.frame.size.height = 50

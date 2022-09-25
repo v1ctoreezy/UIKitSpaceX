@@ -72,7 +72,7 @@ class RocketMainController: UIViewController {
     init(rocket: Rocket, launch: [Launch]) {
         self.rocket = rocket
         self.launches = launch
-        imageView.load(url: URL(string: rocket.flickrImages[Int.random(in: 0...rocket.flickrImages.count)])!)
+        imageView.load(url: URL(string: rocket.flickrImages[Int.random(in: 0...rocket.flickrImages.count - 1)])!)
         super.init(nibName: nil, bundle: nil)
     }
     

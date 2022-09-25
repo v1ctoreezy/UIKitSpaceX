@@ -45,15 +45,6 @@ class SettingsViewController: UIViewController {
         return stack
     }()
     
-//    lazy var mainStack: UIStackView = {
-//        let stack = UIStackView(arrangedSubviews: [heightStack, diamStack, weigthStack, loadStack])
-//        stack.axis = .vertical
-//        stack.distribution = .fillEqually
-//        stack.spacing = 75
-//        stack.translatesAutoresizingMaskIntoConstraints = false
-//        return stack
-//    }()
-    
     let mainStack: RocketSettingsView = {
         let settings = RocketSettingsView()
         settings.translatesAutoresizingMaskIntoConstraints = false

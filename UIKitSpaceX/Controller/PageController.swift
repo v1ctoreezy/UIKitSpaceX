@@ -24,11 +24,19 @@ class PageController: UIPageViewController {
         congigControllers()
     }
     
-    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+//    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+//        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
+
+//    }
+    
+    init(rockets: [Rocket], launches: [Launch]) {
+        self.rockets = rockets
+        self.launches = launches
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         self.dataSource = self
         self.delegate = self
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

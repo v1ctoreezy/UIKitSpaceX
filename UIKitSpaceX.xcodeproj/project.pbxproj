@@ -20,7 +20,6 @@
 		4448DEF128AEC4270069DF28 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4448DEF028AEC4270069DF28 /* Constants.swift */; };
 		447248E028B297DC0039287C /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447248DF28B297DC0039287C /* Rocket.swift */; };
 		447248E228B297E40039287C /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447248E128B297E40039287C /* Launch.swift */; };
-		447248E428B297F00039287C /* CompleteRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447248E328B297F00039287C /* CompleteRocket.swift */; };
 		447248E728B298770039287C /* NetWorkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447248E628B298770039287C /* NetWorkService.swift */; };
 		44750CE328AABEED00FD97A8 /* MainRocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44750CE228AABEED00FD97A8 /* MainRocketView.swift */; };
 		44807BC4288AE678005F7577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44807BC3288AE678005F7577 /* AppDelegate.swift */; };
@@ -53,7 +52,6 @@
 		4448DEF028AEC4270069DF28 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		447248DF28B297DC0039287C /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		447248E128B297E40039287C /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
-		447248E328B297F00039287C /* CompleteRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRocket.swift; sourceTree = "<group>"; };
 		447248E628B298770039287C /* NetWorkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkService.swift; sourceTree = "<group>"; };
 		44750CE228AABEED00FD97A8 /* MainRocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRocketView.swift; sourceTree = "<group>"; };
 		44807BC0288AE678005F7577 /* UIKitSpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitSpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,8 +103,8 @@
 		4403991F28ABFCCD00544AA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				447248E528B298030039287C /* Rocket&Launch */,
-				447248E328B297F00039287C /* CompleteRocket.swift */,
+				447248DF28B297DC0039287C /* Rocket.swift */,
+				447248E128B297E40039287C /* Launch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,11 +128,11 @@
 		4444553328B92C5700E7CD6C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44EB725B28DF7EC200D9F525 /* LoadingView.swift */,
 				44750CE228AABEED00FD97A8 /* MainRocketView.swift */,
 				4403991528ABFB8900544AA8 /* RocketLaunchView.swift */,
 				4403991728ABFBF400544AA8 /* RocketSettingsView.swift */,
 				449F214C28BB4D660064A6F0 /* SwitcherDirsrpView.swift */,
-				44EB725B28DF7EC200D9F525 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,15 +146,6 @@
 				44B52C3228CE473C00105391 /* URLs.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		447248E528B298030039287C /* Rocket&Launch */ = {
-			isa = PBXGroup;
-			children = (
-				447248DF28B297DC0039287C /* Rocket.swift */,
-				447248E128B297E40039287C /* Launch.swift */,
-			);
-			path = "Rocket&Launch";
 			sourceTree = "<group>";
 		};
 		44807BB7288AE678005F7577 = {
@@ -216,11 +205,11 @@
 		44FDB343288E8CC000FEAC4A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44EB725928DF7EA700D9F525 /* LoadingController.swift */,
+				4444552F28B9187300E7CD6C /* PageController.swift */,
 				44807BC7288AE678005F7577 /* RocketMainController.swift */,
 				4403991B28ABFC3C00544AA8 /* LaunchViewController.swift */,
 				4403991928ABFC3100544AA8 /* SettingsViewController.swift */,
-				4444552F28B9187300E7CD6C /* PageController.swift */,
-				44EB725928DF7EA700D9F525 /* LoadingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,7 +309,6 @@
 				44FD9D6528954BD900757327 /* CollectionViewCell.swift in Sources */,
 				44FDB349288EB09600FEAC4A /* CustomDataCell.swift in Sources */,
 				4403991428ABD48D00544AA8 /* Rectangle.swift in Sources */,
-				447248E428B297F00039287C /* CompleteRocket.swift in Sources */,
 				4403991C28ABFC3C00544AA8 /* LaunchViewController.swift in Sources */,
 				44EB725C28DF7EC200D9F525 /* LoadingView.swift in Sources */,
 				4403991828ABFBF400544AA8 /* RocketSettingsView.swift in Sources */,

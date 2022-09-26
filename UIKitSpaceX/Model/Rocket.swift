@@ -52,12 +52,12 @@ struct Rocket: Codable, Identifiable {
         let stages: [Int: [Int: String]] = [
             2 : [
                 1 : String(self.firstStage.engines),
-                2 : String(self.firstStage.fuelAmountTons),
+                2 : String(self.firstStage.fuelAmountTons.stringWithoutZeroFraction),
                 3 : String(self.firstStage.burnTimeSec ?? 0),
             ],
             3 : [
                 1 : String(self.secondStage.engines),
-                2 : String(self.secondStage.fuelAmountTons),
+                2 : String(self.secondStage.fuelAmountTons.stringWithoutZeroFraction),
                 3 : String(self.secondStage.burnTimeSec ?? 0)
             ]
         ]
@@ -74,7 +74,8 @@ struct Rocket: Codable, Identifiable {
     }
     
     private func costFormatter(cost: Int) -> String {
-        return "$\(Double(cost) / 1000000) млн"
+        var result = Double(cost) / 1000000
+        return "$\(result.stringWithoutZeroFraction) млн"
     }
     
     private func dateFormatter(date: String) -> String {

@@ -21,13 +21,8 @@ class PageController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        congigControllers()
+        configControllers()
     }
-    
-//    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
-//        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
-
-//    }
     
     init(rockets: [Rocket], launches: [Launch]) {
         self.rockets = rockets
@@ -46,7 +41,7 @@ class PageController: UIPageViewController {
         return launches.filter{ $0.rocket == rocket.id }
     }
     
-    func congigControllers() {
+    func configControllers() {
         setViewControllers([views[0]], direction: .forward, animated: true)
     }
 }

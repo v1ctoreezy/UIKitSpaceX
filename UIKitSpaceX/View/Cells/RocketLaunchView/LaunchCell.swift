@@ -13,7 +13,7 @@ class LaunchCell: UITableViewCell {
     
     let name: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -21,20 +21,22 @@ class LaunchCell: UITableViewCell {
     
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .systemGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    var success: Bool? 
-    
-    private let image: UIImageView = {
+        
+    let image: UIImageView = {
         let img = UIImageView(image: UIImage(systemName: "paperplane"), highlightedImage: .none)
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
-    
+    let status: UILabel = {
+       let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -52,6 +54,7 @@ class LaunchCell: UITableViewCell {
         contentView.addSubview(name)
         contentView.addSubview(dateLabel)
         contentView.addSubview(image)
+        contentView.addSubview(status)
         
         NSLayoutConstraint.activate([
             image.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -59,6 +62,9 @@ class LaunchCell: UITableViewCell {
             image.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -32),
             image.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constant.horizontalSpacing),
             image.widthAnchor.constraint(equalToConstant: 40),
+
+            status.centerYAnchor.constraint(equalTo: image.centerYAnchor),
+            status.trailingAnchor.constraint(equalTo: image.leadingAnchor, constant: -5),
             
             name.topAnchor.constraint(equalTo: image.topAnchor, constant: -10),
             name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constant.horizontalSpacing),

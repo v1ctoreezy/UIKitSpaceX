@@ -63,7 +63,7 @@ extension GridCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
         let data = rocket?.gridData(indexPath: indexPath, mesurePick: measureIndx)
         cell.disrip.text = "\(MainRocketHelper.shared.titlesTable[indexPath.section][indexPath.row]), \(data!.1)"
-        cell.data.text = String(data?.0 ?? 0.0)
+        cell.data.text = data!.0.stringWithoutZeroFraction
         return cell
     }
 }

@@ -7,10 +7,6 @@
 
 import UIKit
 
-class CustomSegment: UISegmentedControl {
-
-}
-
 class SwitcherDirsrpView: UIView {
     
     var descriptionS: String?
@@ -30,12 +26,14 @@ class SwitcherDirsrpView: UIView {
         let items = [measure1, measure2]
         let switcher = UISegmentedControl(items: items)
         switcher.backgroundColor = .black
-        switcher.translatesAutoresizingMaskIntoConstraints = false
         switcher.selectedSegmentIndex = 0
-        switcher.frame.size.height = 50
+        switcher.translatesAutoresizingMaskIntoConstraints = false
+        switcher.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)], for: .selected)
+        switcher.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)], for: .normal)
+        
         return switcher
     }()
-    
+
     init(descr: String, mes1: String, mes2: String) {
         super.init(frame: .zero)
         
@@ -64,7 +62,10 @@ class SwitcherDirsrpView: UIView {
             descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             descriptionLabel.topAnchor.constraint(equalTo: topAnchor),
             measureSwitcher.trailingAnchor.constraint(equalTo: trailingAnchor),
-            measureSwitcher.topAnchor.constraint(equalTo: topAnchor)
+            measureSwitcher.topAnchor.constraint(equalTo: topAnchor),
+            
+            measureSwitcher.heightAnchor.constraint(equalToConstant: 40),
+            measureSwitcher.widthAnchor.constraint(equalToConstant: 125)
         ])
     }
 }

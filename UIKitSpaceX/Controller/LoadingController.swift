@@ -47,7 +47,6 @@ class LoadingController: UIViewController {
         NetWorkService.shared.getData(url: Urls.launch.rawValue, type: Launch.self) { launches in
             self.launches = launches
         }
-        while rockets.isEmpty || launches.isEmpty { } // Костыль
         
         NotificationCenter.default.post(name: Notification.Name(noticName), object: nil)
     }

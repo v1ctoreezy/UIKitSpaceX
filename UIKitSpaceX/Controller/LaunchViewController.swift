@@ -87,7 +87,15 @@ extension LaunchViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.dateLabel.text = transformDate(date: launches[indexPath.section].dateUnix)
         cell.name.text = launches[indexPath.section].name
-        
+        guard let success = launches[indexPath.section].success else { return cell }
+        if !success {
+            cell.image.transform = CGAffineTransform(rotationAngle: Double.pi)
+            cell.status.text = "failure"
+            cell.status.textColor = .red
+            return cell
+        }
+        cell.status.text = "success"
+        cell.status.textColor = .green
         return cell
     }
     

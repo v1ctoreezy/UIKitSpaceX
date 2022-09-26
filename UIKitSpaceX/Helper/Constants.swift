@@ -8,6 +8,13 @@
 import Foundation
 import UIKit
 
+enum Settings: String {
+    case heigh = "heigh"
+    case diameter = "diameter"
+    case weight = "weight"
+    case load = "payload"
+}
+
 enum Constant {
     static let horizontalSpacing: CGFloat = 32.0
     static let verticalSpacing: CGFloat = 40.0

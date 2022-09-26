@@ -10,7 +10,6 @@ import UIKit
 class RocketMainController: UIViewController {
     
     var rocket: Rocket
-    var flag = true
     var launches: [Launch]
     
     private lazy var rocketView: MainRocketView = {
@@ -41,7 +40,7 @@ class RocketMainController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
-        
+
         rocketView.tableView.dataSource = self
         rocketView.tableView.delegate = self
         
@@ -73,6 +72,7 @@ class RocketMainController: UIViewController {
         self.rocket = rocket
         self.launches = launch
         imageView.load(url: URL(string: rocket.flickrImages[Int.random(in: 0...rocket.flickrImages.count - 1)])!)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -121,6 +121,7 @@ extension RocketMainController: UITableViewDelegate, UITableViewDataSource {
             let discription = MainRocketHelper.shared.titlesTable[indexPath.section][indexPath.row]
             cell.discription.text = discription
             cell.data.text = rocket.getDataTablesData(key: discription)
+//            print(rocket.getDataTablesData(key: discription))
             return cell
             
         } else { // stages cells
@@ -160,7 +161,6 @@ extension RocketMainController: UITableViewDelegate, UITableViewDataSource {
 // MARK: Extension for API Image download
 extension UIImageView {
     func load(url: URL) {
-        
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {

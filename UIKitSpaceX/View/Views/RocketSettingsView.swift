@@ -86,6 +86,7 @@ class RocketSettingsView: UIView {
             mainStack.trailingAnchor.constraint(equalTo: trailingAnchor),
             mainStack.topAnchor.constraint(equalTo: headerStack.bottomAnchor, constant: 30),
             mainStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: frame.height / -2)
+            
         ])
     }
 }

@@ -23,34 +23,6 @@ class SettingsViewController: UIViewController {
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
-    
-//    let heightStack: SwitcherDirsrpView = {
-//        let stack = SwitcherDirsrpView(descr: "Высота", mes1: "m", mes2: "ft")
-//        stack.measureSwitcher.selectedSegmentIndex = UserDefaults.standard.integer(forKey: Settings.heigh.rawValue)
-//        stack.measureSwitcher.addTarget(SwitcherDirsrpView.self, action: #selector(saveChanges), for: .valueChanged)
-//        return stack
-//    }()
-//
-//    let diamStack: SwitcherDirsrpView = {
-//        let stack = SwitcherDirsrpView(descr: "Диаметр", mes1: "m", mes2: "ft")
-//        stack.measureSwitcher.selectedSegmentIndex = UserDefaults.standard.integer(forKey: Settings.diameter.rawValue)
-//        stack.measureSwitcher.addTarget(stack.measureSwitcher, action: #selector(saveChanges), for: .valueChanged)
-//        return stack
-//    }()
-//
-//    let weigthStack: SwitcherDirsrpView = {
-//        let stack = SwitcherDirsrpView(descr: "Масса", mes1: "kg", mes2: "lb")
-//        stack.measureSwitcher.selectedSegmentIndex = UserDefaults.standard.integer(forKey: Settings.weight.rawValue)
-//        stack.measureSwitcher.addTarget(self, action: #selector(saveChanges), for: .valueChanged)
-//        return stack
-//    }()
-//
-//    let loadStack: SwitcherDirsrpView = {
-//        let stack = SwitcherDirsrpView(descr: "Полезная нагрузка", mes1: "kg", mes2: "lb")
-//        stack.measureSwitcher.selectedSegmentIndex = UserDefaults.standard.integer(forKey: Settings.load.rawValue)
-//        stack.measureSwitcher.addTarget(self, action: #selector(saveChanges), for: .valueChanged)
-//        return stack
-//    }()
 
     let mainStack: RocketSettingsView = {
         let settings = RocketSettingsView()

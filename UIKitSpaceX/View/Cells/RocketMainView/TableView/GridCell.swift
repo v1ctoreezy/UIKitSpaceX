@@ -10,9 +10,9 @@ import UIKit
 class GridCell: UITableViewCell   {
     
     static let identifer = "GridCell"
+    let notific = NotificationCenter.default
     let grid: UICollectionView
     var rocket: Rocket?
-    var measureIndx = 0
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         let layout = UICollectionViewFlowLayout()
@@ -33,6 +33,8 @@ class GridCell: UITableViewCell   {
         grid.backgroundColor = .black
 
         contentView.addSubview(grid)
+        
+        notific.addObserver(self, selector: #selector(reload), name: Notification.Name("changed"), object: nil)
     }
     
     override func layoutSubviews() {
@@ -43,6 +45,10 @@ class GridCell: UITableViewCell   {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func reload() {
+        grid.reloadData()
     }
 }
 
@@ -60,10 +66,13 @@ extension GridCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let defaults = UserDefaults.standard.integer(forKey: Settings.allCases[indexPath.row].rawValue)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        let data = rocket?.gridData(indexPath: indexPath, mesurePick: measureIndx)
+        let data = rocket?.gridData(indexPath: indexPath, mesurePick: defaults)
+        
         cell.disrip.text = "\(MainRocketHelper.shared.titlesTable[indexPath.section][indexPath.row]), \(data!.1)"
         cell.data.text = data!.0.stringWithoutZeroFraction
+        
         return cell
     }
 }

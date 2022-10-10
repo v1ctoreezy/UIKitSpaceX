@@ -71,6 +71,6 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(mainStack.weigthStack.measureSwitcher.selectedSegmentIndex, forKey: Settings.weight.rawValue)
         UserDefaults.standard.set(mainStack.loadStack.measureSwitcher.selectedSegmentIndex, forKey: Settings.load.rawValue)
         
-//        NotificationCenter.default.post(Notification(name: Notification.Name))
+        NotificationCenter.default.post(Notification(name: Notification.Name("changed")))
     }
 }

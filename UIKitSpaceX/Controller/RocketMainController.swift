@@ -11,7 +11,7 @@ class RocketMainController: UIViewController {
     
     var rocket: Rocket
     var launches: [Launch]
-    
+        
     private lazy var rocketView: MainRocketView = {
         let header =  MainRocketView()
         header.startsButton.addTarget(self, action: #selector(showStarts), for: .touchUpInside)
@@ -43,7 +43,6 @@ class RocketMainController: UIViewController {
 
         rocketView.tableView.dataSource = self
         rocketView.tableView.delegate = self
-        
         view.backgroundColor = .black
         setUp()
     }
@@ -72,7 +71,6 @@ class RocketMainController: UIViewController {
         self.rocket = rocket
         self.launches = launch
         imageView.load(url: URL(string: rocket.flickrImages[Int.random(in: 0...rocket.flickrImages.count - 1)])!)
-        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -91,7 +89,6 @@ class RocketMainController: UIViewController {
         let settings = SettingsViewController()
         present(settings, animated: true)
     }
-    
 }
 
     //MARK: Configure table
@@ -121,7 +118,6 @@ extension RocketMainController: UITableViewDelegate, UITableViewDataSource {
             let discription = MainRocketHelper.shared.titlesTable[indexPath.section][indexPath.row]
             cell.discription.text = discription
             cell.data.text = rocket.getDataTablesData(key: discription)
-//            print(rocket.getDataTablesData(key: discription))
             return cell
             
         } else { // stages cells

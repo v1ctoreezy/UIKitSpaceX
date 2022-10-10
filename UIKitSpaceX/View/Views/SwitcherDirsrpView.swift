@@ -28,6 +28,7 @@ class SwitcherDirsrpView: UIView {
         switcher.backgroundColor = .black
         switcher.selectedSegmentIndex = 0
         switcher.translatesAutoresizingMaskIntoConstraints = false
+        
         switcher.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)], for: .selected)
         switcher.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .semibold)], for: .normal)
         

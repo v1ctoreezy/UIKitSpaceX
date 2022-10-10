@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Settings: String {
+enum Settings: String, CaseIterable {
     case heigh = "heigh"
     case diameter = "diameter"
     case weight = "weight"

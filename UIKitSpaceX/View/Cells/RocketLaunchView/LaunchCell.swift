@@ -29,6 +29,7 @@ class LaunchCell: UITableViewCell {
         
     let image: UIImageView = {
         let img = UIImageView(image: UIImage(systemName: "paperplane"), highlightedImage: .none)
+        img.tintColor = .gray
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
@@ -48,7 +49,7 @@ class LaunchCell: UITableViewCell {
     }
     
     func setUp() {
-        contentView.backgroundColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        contentView.backgroundColor = Color.uiColor
         contentView.layer.cornerRadius = 15
         
         contentView.addSubview(name)

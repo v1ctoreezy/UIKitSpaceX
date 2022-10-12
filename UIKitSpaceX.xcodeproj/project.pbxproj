@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4403991428ABD48D00544AA8 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403991328ABD48D00544AA8 /* Rectangle.swift */; };
 		4403991628ABFB8900544AA8 /* RocketLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403991528ABFB8900544AA8 /* RocketLaunchView.swift */; };
 		4403991828ABFBF400544AA8 /* RocketSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403991728ABFBF400544AA8 /* RocketSettingsView.swift */; };
 		4403991A28ABFC3100544AA8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403991928ABFC3100544AA8 /* SettingsViewController.swift */; };
@@ -28,19 +27,17 @@
 		44807BCD288AE67A005F7577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44807BCC288AE67A005F7577 /* Assets.xcassets */; };
 		44807BD0288AE67A005F7577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44807BCE288AE67A005F7577 /* LaunchScreen.storyboard */; };
 		449F214D28BB4D660064A6F0 /* SwitcherDirsrpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449F214C28BB4D660064A6F0 /* SwitcherDirsrpView.swift */; };
-		44B52C3328CE473C00105391 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B52C3228CE473C00105391 /* URLs.swift */; };
 		44DDDD0428E220C900792568 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDDD0328E220C900792568 /* DoubleExtension.swift */; };
 		44EB725A28DF7EA700D9F525 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EB725928DF7EA700D9F525 /* LoadingController.swift */; };
 		44EB725C28DF7EC200D9F525 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EB725B28DF7EC200D9F525 /* LoadingView.swift */; };
 		44FD9D6128952FE800757327 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD9D6028952FE700757327 /* GridCell.swift */; };
-		44FD9D6528954BD900757327 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD9D6428954BD900757327 /* CollectionViewCell.swift */; };
+		44FD9D6528954BD900757327 /* CollectionViewGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FD9D6428954BD900757327 /* CollectionViewGridCell.swift */; };
 		44FDB347288EAA8700FEAC4A /* CustomDataTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDB346288EAA8700FEAC4A /* CustomDataTitleCell.swift */; };
 		44FDB349288EB09600FEAC4A /* CustomDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDB348288EB09600FEAC4A /* CustomDataCell.swift */; };
 		44FDB34D288EC0A100FEAC4A /* CellWithOutMesur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDB34C288EC0A100FEAC4A /* CellWithOutMesur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4403991328ABD48D00544AA8 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		4403991528ABFB8900544AA8 /* RocketLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchView.swift; sourceTree = "<group>"; };
 		4403991728ABFBF400544AA8 /* RocketSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketSettingsView.swift; sourceTree = "<group>"; };
 		4403991928ABFC3100544AA8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +60,11 @@
 		44807BCF288AE67A005F7577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44807BD1288AE67A005F7577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449F214C28BB4D660064A6F0 /* SwitcherDirsrpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherDirsrpView.swift; sourceTree = "<group>"; };
-		44B52C3228CE473C00105391 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		44DDDD0328E220C900792568 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		44EB725928DF7EA700D9F525 /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
 		44EB725B28DF7EC200D9F525 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		44FD9D6028952FE700757327 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
-		44FD9D6428954BD900757327 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		44FD9D6428954BD900757327 /* CollectionViewGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewGridCell.swift; sourceTree = "<group>"; };
 		44FDB346288EAA8700FEAC4A /* CustomDataTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataTitleCell.swift; sourceTree = "<group>"; };
 		44FDB348288EB09600FEAC4A /* CustomDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataCell.swift; sourceTree = "<group>"; };
 		44FDB34C288EC0A100FEAC4A /* CellWithOutMesur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithOutMesur.swift; sourceTree = "<group>"; };
@@ -143,9 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4448DEF028AEC4270069DF28 /* Constants.swift */,
-				4403991328ABD48D00544AA8 /* Rectangle.swift */,
 				4444553128B92A2100E7CD6C /* MainRocketHelper.swift */,
-				44B52C3228CE473C00105391 /* URLs.swift */,
 				44DDDD0328E220C900792568 /* DoubleExtension.swift */,
 			);
 			path = Helper;
@@ -200,7 +194,7 @@
 		44FD9D6328954BC300757327 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				44FD9D6428954BD900757327 /* CollectionViewCell.swift */,
+				44FD9D6428954BD900757327 /* CollectionViewGridCell.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -306,13 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44B52C3328CE473C00105391 /* URLs.swift in Sources */,
 				4403991628ABFB8900544AA8 /* RocketLaunchView.swift in Sources */,
 				447248E728B298770039287C /* NetWorkService.swift in Sources */,
 				44DDDD0428E220C900792568 /* DoubleExtension.swift in Sources */,
-				44FD9D6528954BD900757327 /* CollectionViewCell.swift in Sources */,
+				44FD9D6528954BD900757327 /* CollectionViewGridCell.swift in Sources */,
 				44FDB349288EB09600FEAC4A /* CustomDataCell.swift in Sources */,
-				4403991428ABD48D00544AA8 /* Rectangle.swift in Sources */,
 				4403991C28ABFC3C00544AA8 /* LaunchViewController.swift in Sources */,
 				44EB725C28DF7EC200D9F525 /* LoadingView.swift in Sources */,
 				4403991828ABFBF400544AA8 /* RocketSettingsView.swift in Sources */,
@@ -400,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -454,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -477,6 +469,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "Montserrat-SemiBold.ttf";
@@ -507,6 +500,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "Montserrat-SemiBold.ttf";

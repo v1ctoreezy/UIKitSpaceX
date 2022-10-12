@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
-    static let identifier = "CollectionViewCell"
+class CollectionViewGridCell: UICollectionViewCell {
+    static let identifier = "CollectionViewGridCell"
     
     var disrip: UILabel = {
         let label = UILabel()
@@ -21,7 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     var data: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: Constant.fontSize, weight: .semibold)
+        label.font = UIFont(name: "Montserrat-SemiBold", size: Constant.fontSize)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -48,7 +48,7 @@ class CollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 35
-        self.layer.backgroundColor = CGColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        self.layer.backgroundColor = Color.cgColor
         
         NSLayoutConstraint.activate([
             stack.centerYAnchor.constraint(equalTo: centerYAnchor),

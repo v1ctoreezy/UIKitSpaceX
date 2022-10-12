@@ -9,18 +9,11 @@ import UIKit
 
 class LoadingView: UIView {
     let activity: UIActivityIndicatorView = {
-        let actv = UIActivityIndicatorView(style: .large)
-        actv.translatesAutoresizingMaskIntoConstraints = false
-        actv.color = .white
-        actv.startAnimating()
-        return actv
-    }()
-    
-    let label: UILabel = {
-       let label = UILabel()
-        label.text = "dsa"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+        let activity = UIActivityIndicatorView(style: .large)
+        activity.translatesAutoresizingMaskIntoConstraints = false
+        activity.color = .white
+        activity.startAnimating()
+        return activity
     }()
     
     override init(frame: CGRect) {

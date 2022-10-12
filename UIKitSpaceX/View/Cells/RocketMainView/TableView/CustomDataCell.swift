@@ -20,7 +20,7 @@ class CustomDataCell: UITableViewCell {
     
     let data: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: Constant.fontSize, weight: .semibold)
+        label.font = UIFont(name: "Montserrat-SemiBold", size: Constant.fontSize)
         label.textColor = .white
         label.text = "data"
         label.translatesAutoresizingMaskIntoConstraints = false

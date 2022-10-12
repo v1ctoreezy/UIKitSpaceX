@@ -9,23 +9,32 @@ import Foundation
 import UIKit
 
 enum Settings: String, CaseIterable {
-    case heigh = "heigh"
+    case heigh = "height"
     case diameter = "diameter"
     case weight = "weight"
     case load = "payload"
 }
+
+enum Urls: String {
+    case rocket = "https://api.spacexdata.com/v4/rockets"
+    case launch = "https://api.spacexdata.com/v4/launches"
+}
+
 
 enum Constant {
     static let horizontalSpacing: CGFloat = 32.0
     static let verticalSpacing: CGFloat = 40.0
     static let cornerRadius: CGFloat = 32.0
     static let fontSize: CGFloat = 18.0
-    
-//    enum Colors {
-//        static let basicColor = UIColor(hex: 0xCACACA)
-//        static let basicTextColor = UIColor(hex: 0xF6F6F6)
-//        static let lightTextColor = UIColor(hex: 0xFFFFFF)
-//        static let unitsTextColor = UIColor(hex: 0x8E8E8F)
-//        static let collectionViewCellColor = UIColor(hex: 0x212121)
-//    }
+    static let headerFont: CGFloat = 27.0
+}
+
+enum NotificationNames {
+    static let gridDataChanged = "changed"
+    static let loadedData = "dataLoaded"
+}
+
+enum Color {
+    static let uiColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+    static let cgColor = CGColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
 }

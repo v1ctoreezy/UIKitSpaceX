@@ -8,15 +8,13 @@
 import UIKit
 
 class RocketLaunchView: UIView {
+    
     let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        
         table.register(LaunchCell.self, forCellReuseIdentifier: LaunchCell.identifer)
-        
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         table.backgroundColor = .black
         table.translatesAutoresizingMaskIntoConstraints = false
-
         return table
     }()
     

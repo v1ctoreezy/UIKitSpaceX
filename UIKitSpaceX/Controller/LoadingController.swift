@@ -8,9 +8,9 @@
 import UIKit
 
 class LoadingController: UIViewController {
-    private let noticName = "loaded"
     var rockets = [Rocket]()
     var launches = [Launch]()
+    private let notific = NotificationCenter.default
     
     let loadView: LoadingView = {
         let load = LoadingView()
@@ -20,12 +20,7 @@ class LoadingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let notific = NotificationCenter.default
-        notific.addObserver(self, selector: #selector(loaded), name: Notification.Name(noticName), object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        notific.addObserver(self, selector: #selector(loaded), name: Notification.Name(NotificationNames.loadedData), object: nil)
         configView()
         getData()
     }
@@ -48,7 +43,7 @@ class LoadingController: UIViewController {
             self.launches = launches
         }
         
-        NotificationCenter.default.post(name: Notification.Name(noticName), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(NotificationNames.loadedData), object: nil)
     }
     
     func showPageController() {

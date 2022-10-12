@@ -29,10 +29,8 @@ class LaunchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.navigationBar.isHidden = false
         self.navigationItem.title = startsView.nameLabel.text
-//        navigationController?.navigationBar.backItem?.title = "Назад"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -82,12 +80,13 @@ extension LaunchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LaunchCell.identifer, for: indexPath) as! LaunchCell
-        cell.backgroundColor = .black // RED
+        cell.backgroundColor = .black 
         cell.selectionStyle = .none
         
         cell.dateLabel.text = transformDate(date: launches[indexPath.section].dateUnix)
         cell.name.text = launches[indexPath.section].name
         guard let success = launches[indexPath.section].success else { return cell }
+        
         if !success {
             cell.image.transform = CGAffineTransform(rotationAngle: Double.pi)
             cell.status.text = "failure"

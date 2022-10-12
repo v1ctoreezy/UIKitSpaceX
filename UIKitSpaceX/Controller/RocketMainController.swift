@@ -54,7 +54,7 @@ class RocketMainController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            imageView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: -50),
+            imageView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: -60),
             imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 400),
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor),

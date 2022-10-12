@@ -25,7 +25,7 @@ class GridCell: UITableViewCell   {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         grid.showsHorizontalScrollIndicator = false
-        grid.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        grid.register(CollectionViewGridCell.self, forCellWithReuseIdentifier: CollectionViewGridCell.identifier)
 
         grid.delegate = self
         grid.dataSource = self
@@ -34,7 +34,7 @@ class GridCell: UITableViewCell   {
 
         contentView.addSubview(grid)
         
-        notific.addObserver(self, selector: #selector(reload), name: Notification.Name("changed"), object: nil)
+        notific.addObserver(self, selector: #selector(reload), name: Notification.Name(NotificationNames.gridDataChanged), object: nil)
     }
     
     override func layoutSubviews() {
@@ -67,7 +67,7 @@ extension GridCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let defaults = UserDefaults.standard.integer(forKey: Settings.allCases[indexPath.row].rawValue)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewGridCell.identifier, for: indexPath) as! CollectionViewGridCell
         let data = rocket?.gridData(indexPath: indexPath, mesurePick: defaults)
         
         cell.disrip.text = "\(MainRocketHelper.shared.titlesTable[indexPath.section][indexPath.row]), \(data!.1)"

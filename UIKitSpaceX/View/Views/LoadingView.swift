@@ -28,7 +28,6 @@ class LoadingView: UIView {
     
     func configActivity() {
         addSubview(activity)
-
         NSLayoutConstraint.activate([
             activity.centerXAnchor.constraint(equalTo: centerXAnchor),
             activity.centerYAnchor.constraint(equalTo: centerYAnchor)

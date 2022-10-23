@@ -20,7 +20,12 @@ class LoadingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let notific = NotificationCenter.default
         notific.addObserver(self, selector: #selector(loaded), name: Notification.Name(NotificationNames.loadedData), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configView()
         getData()
     }
@@ -48,7 +53,7 @@ class LoadingController: UIViewController {
             defer { semaphore.signal() }
             self.launches = launches
         }
-    
+        
         NotificationCenter.default.post(name: Notification.Name(NotificationNames.loadedData), object: nil)
     }
     

@@ -42,15 +42,16 @@ class LoadingController: UIViewController {
     
     private func getData() {
         let semaphore = DispatchSemaphore.init(value: 0)
+        NetWorkService.shared.getData(url: Urls.launch.rawValue, type: Launch.self) { launches in
+            defer { semaphore.signal() }
+            self.launches = launches
+        }
+        semaphore.wait()
         NetWorkService.shared.getData(url: Urls.rocket.rawValue, type: Rocket.self) { rockets in
             defer { semaphore.signal() }
             self.rockets = rockets
         }
         semaphore.wait()
-        NetWorkService.shared.getData(url: Urls.launch.rawValue, type: Launch.self) { launches in
-            defer { semaphore.signal() }
-            self.launches = launches
-        }
         
         NotificationCenter.default.post(name: Notification.Name(NotificationNames.loadedData), object: nil)
     }
